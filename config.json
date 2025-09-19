@@ -175,6 +175,22 @@
       }
     },
     {
+      "type": "text",
+      "action": "add",
+      "args": {
+        "name": "anycast",
+        "uri": "./anycast-clean.txt"
+      }
+    },
+    {
+      "type": "regionMapping",
+      "action": "add",
+      "args": {
+        "uri": "./region_mapping.json",
+        "wantedList": ["asia", "europe", "america"]
+      }
+    },
+    {
       "type": "private",
       "action": "add"
     }
@@ -188,7 +204,16 @@
         "outputName": "geoip.dat"
       }
     },
-    {
+      {
+        "type": "v2rayGeoIPDat",
+        "action": "output",
+        "args": {
+          "outputDir": "./output",
+          "outputName": "geoip-enhanced.dat"
+        }
+      },
+
+      {
       "type": "v2rayGeoIPDat",
       "action": "output",
       "args": {
@@ -213,6 +238,22 @@
           "telegram",
           "twitter",
           "tor"
+        ]
+      }
+    },
+    {
+      "type": "v2rayGeoIPDat",
+      "action": "output",
+      "args": {
+        "outputDir": "./output",
+        "outputName": "geoip-states-anycast.dat",
+        "wantedList": [
+          "cn", "jp", "kr", "in", "th", "vn", "sg", "my", "id", "ph", "tw", "hk", "mo", "kh", "la", "mm", "bn", "bt", "np", "lk", "mv", "bd", "pk", "af", "ir", "iq", "sy", "jo", "lb", "il", "ps", "sa", "ae", "om", "ye", "kw", "qa", "bh", "mn", "kz", "kg", "tj", "tm", "uz", "am", "az", "ge",
+          "gb", "fr", "de", "it", "es", "pt", "nl", "be", "lu", "ch", "at", "ie", "dk", "se", "no", "fi", "is", "pl", "cz", "sk", "hu", "si", "hr", "ba", "rs", "me", "mk", "al", "bg", "ro", "md", "ua", "by", "lt", "lv", "ee", "ru", "gr", "cy", "mt", "tr", "ad", "mc", "sm", "va", "li",
+          "us", "ca", "mx", "gt", "bz", "sv", "hn", "ni", "cr", "pa", "cu", "jm", "ht", "do", "pr", "tt", "bb", "gd", "vc", "lc", "dm", "ag", "kn", "bs", "br", "ar", "cl", "pe", "co", "ve", "gy", "sr", "uy", "py", "bo", "ec",
+          "asia", "europe", "america",
+          "cloudflare", "cloudfront", "facebook", "fastly", "google", "netflix", "telegram", "twitter", "tor",
+          "anycast", "private"
         ]
       }
     },

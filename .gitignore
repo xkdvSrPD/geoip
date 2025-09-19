@@ -77,3 +77,9 @@ geoip
 *.mmdb
 *.srs
 *.mrs
+
+# Anycast temporary files
+anycast.yaml
+anycast.txt
+anycast-ipv4.txt
+anycast-clean.txt
